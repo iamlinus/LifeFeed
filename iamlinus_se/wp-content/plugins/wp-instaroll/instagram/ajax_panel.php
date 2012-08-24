@@ -12,7 +12,7 @@ function wpinstaroll_photosbyusertable_ayax()
 	$search_tag = get_option(WP_ROLL_INSTAGRAM_PLUGIN_PREFIX.'_instagram_search_tag');
 	$instagram_username = get_option(WP_ROLL_INSTAGRAM_PLUGIN_PREFIX.'_instagram_user_username');
 	
-	if (empty($app_id) || empty($app_secret) || empty($user_access_token) || empty($search_tag))
+	if (empty($app_id) || empty($app_secret) || empty($user_access_token))
 	{					
 		$instagram_settings_page = get_bloginfo('wpurl').'/wp-admin/options-general.php?page='.WP_ROLL_INSTAGRAM_PLUGIN_PREFIX.'_menu';
 		
@@ -22,14 +22,24 @@ function wpinstaroll_photosbyusertable_ayax()
 
 		print('<h3>Instagram stream for user: '.$instagram_username.'</h3>');
 
+		// show user stream (user + friends photos) or only user photos (checked)?
+		$show_useronly = get_option(WP_ROLL_INSTAGRAM_PLUGIN_PREFIX.'_instagram_show_useronly_photos');
+		if ($show_useronly != 'show_useronly')
+			$is_checked_useronly = '';
+		else
+			$is_checked_useronly = 'checked="checked" ';
+
+		// don't show already selected photos, or show them (checked)?
 		$show_published = get_option(WP_ROLL_INSTAGRAM_PLUGIN_PREFIX.'_instagram_show_published_photos');
 		if ($show_published != 'dont_show_published')
-			$is_checked = 'checked="checked" ';
+			$is_checked_published = 'checked="checked" ';
 		else
-			$is_checked = '';
+			$is_checked_published = '';
 		
 		print(	'<p><a class="button-primary" href="'.wpinstaroll_getInstagramGeneratedDraftPosts().'">Go to Instagram draft posts</a>'.
-				'<span class="top_right_buttons"><span class="show_published_pics_check">Show already selected Instagram photos&nbsp;<input type="checkbox" '.$is_checked.'name="show_already_published" id="show_already_published_userpanel" value="yes" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'.
+				'<span class="top_right_buttons">'.
+				'<span class="show_useronly_pics_check">Show only user Instagram photos (no friends)&nbsp;<input type="checkbox" '.$is_checked_useronly.'name="show_useronly" id="show_useronly_userpanel" value="yes" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'.
+				'<span class="show_published_pics_check">Show already selected Instagram photos&nbsp;<input type="checkbox" '.$is_checked_published.'name="show_already_published" id="show_already_published_userpanel" value="yes" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'.
 				'<a class="button-primary" id="Instagram_userphotosupdate" href="#">Update view</a></span></p>');
 
 		$user_feed = wpinstaroll_getInstagramUserStream();
@@ -123,11 +133,18 @@ function wpinstaroll_photosbytagtable_ayax()
 	{					
 		$instagram_settings_page = get_bloginfo('wpurl').'/wp-admin/options-general.php?page='.WP_ROLL_INSTAGRAM_PLUGIN_PREFIX.'_menu';
 		
-		print('<p><strong>You need to  configure Instagram access from the <a href="'.$instagram_settings_page.'">Instagram Settings</a> panel inside the Settings menu.</strong></p>');
+		print('<p><strong>You need to  configure Instagram access from the <a href="'.$instagram_settings_page.'">Instagram Settings</a> panel inside the Settings menu.<br/><br/>Note: the "Search Tag" field but be filled, for this panel to work!</strong></p>');
 	}
 	else {
 		
 		print('<h3>Instagram tag: '.$search_tag.'</h3>');
+
+		// show all photos or only user photos with specified search tag (checked)?
+		$show_useronly = get_option(WP_ROLL_INSTAGRAM_PLUGIN_PREFIX.'_instagram_show_useronly_photos_by_tag');
+		if ($show_useronly != 'show_useronly_by_tag')
+			$is_checked_useronly = '';
+		else
+			$is_checked_useronly = 'checked="checked" ';
 
 		$show_published = get_option(WP_ROLL_INSTAGRAM_PLUGIN_PREFIX.'_instagram_show_published_photos');
 		if ($show_published != 'dont_show_published')
@@ -136,7 +153,9 @@ function wpinstaroll_photosbytagtable_ayax()
 			$is_checked = '';
 		
 		print(	'<p><a class="button-primary" href="'.wpinstaroll_getInstagramGeneratedDraftPosts().'">Go to Instagram draft posts</a>'.
-				'<span class="top_right_buttons"><span class="show_published_pics_check">Show already selected Instagram photos&nbsp;<input type="checkbox" '.$is_checked.'name="show_already_published" id="show_already_published_tagpanel" value="yes" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'.
+				'<span class="top_right_buttons">'.
+				'<span class="show_useronly_pics_check">Show only user Instagram photos&nbsp;<input type="checkbox" '.$is_checked_useronly.'name="show_useronly" id="show_useronly_tagpanel" value="yes" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'.
+				'<span class="show_published_pics_check">Show already selected Instagram photos&nbsp;<input type="checkbox" '.$is_checked.'name="show_already_published" id="show_already_published_tagpanel" value="yes" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>'.
 				'<a class="button-primary" id="Instagram_tagphotosupdate" href="#">Update view</a></span></p>');
 
 		$tag_feed = wpinstaroll_getInstagramPhotosWithTag($search_tag);
@@ -270,5 +289,59 @@ function wpinstaroll_setshowpublishedflag_ayax()
 	// http://[HOST]/wp-admin/admin-ajax.php?action=set_instagram_show_published_flag
 }
 add_action('wp_ajax_set_instagram_show_published_flag', 'wpinstaroll_setshowpublishedflag_ayax');
+
+// handler for setting/unsetting the 'show only user photos' flag, for first panel
+function wpinstaroll_setshowuseronlyflag_ayax()
+{
+	if (empty($_POST['show']))
+	{
+		$response = array(
+			'error' => true,
+			'error_description' => WP_ROLL_INSTAGRAM_ERROR_MISSING_PARAMETERS_MESSAGE,
+			'error_code' => WP_ROLL_INSTAGRAM_ERROR_MISSING_PARAMETERS_CODE
+		);
+	}
+	else {
+
+		if ($_POST['show'] != 'show_useronly')
+			$show_useronly_flag = 'show_userandfriends';
+		else
+			$show_useronly_flag = 'show_useronly';
+
+		update_option(WP_ROLL_INSTAGRAM_PLUGIN_PREFIX.'_instagram_show_useronly_photos', $show_useronly_flag);
+	}
+
+	exit;
+	// accessible with URL:
+	// http://[HOST]/wp-admin/admin-ajax.php?action=set_instagram_show_useronly_flag
+}
+add_action('wp_ajax_set_instagram_show_useronly_flag', 'wpinstaroll_setshowuseronlyflag_ayax');
+
+// handler for setting/unsetting the 'show only user photos' flag, for second panel
+function wpinstaroll_setshowuseronly_by_tag_flag_ayax()
+{
+	if (empty($_POST['show']))
+	{
+		$response = array(
+			'error' => true,
+			'error_description' => WP_ROLL_INSTAGRAM_ERROR_MISSING_PARAMETERS_MESSAGE,
+			'error_code' => WP_ROLL_INSTAGRAM_ERROR_MISSING_PARAMETERS_CODE
+		);
+	}
+	else {
+
+		if ($_POST['show'] != 'show_useronly_by_tag')
+			$show_useronly_flag = 'show_all_by_tag';
+		else
+			$show_useronly_flag = 'show_useronly_by_tag';
+
+		update_option(WP_ROLL_INSTAGRAM_PLUGIN_PREFIX.'_instagram_show_useronly_photos_by_tag', $show_useronly_flag);
+	}
+
+	exit;
+	// accessible with URL:
+	// http://[HOST]/wp-admin/admin-ajax.php?action=set_instagram_show_useronly_by_tag_flag
+}
+add_action('wp_ajax_set_instagram_show_useronly_by_tag_flag', 'wpinstaroll_setshowuseronly_by_tag_flag_ayax');
 
 ?>

@@ -1,14 +1,14 @@
-# Translation of Development (future 3.4) in Swedish
-# This file is distributed under the same license as the Development (future 3.4) package.
+# Translation of 3.4.x in Swedish
+# This file is distributed under the same license as the 3.4.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2012-06-13 18:24:46+0000\n"
+"PO-Revision-Date: 2012-06-28 02:07:15+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: GlotPress/0.1\n"
-"Project-Id-Version: Development (future 3.4)\n"
+"Project-Id-Version: 3.4.x\n"
 
 #: wp-includes/locale.php:184
 msgctxt "text direction"
@@ -506,7 +506,7 @@ msgstr "Svenska=sv,Engelska=en,Danska=da,Holländska=nl,Finska=fi,Franska=fr,Tys
 #: wp-includes/formatting.php:37
 msgctxt "opening curly double quote"
 msgid "&#8220;"
-msgstr "&#8221;"
+msgstr "&#8220;"
 
 #: wp-includes/formatting.php:39
 msgctxt "closing curly double quote"
@@ -531,12 +531,12 @@ msgstr "&#8243;"
 #: wp-includes/formatting.php:50
 msgctxt "opening curly single quote"
 msgid "&#8216;"
-msgstr "&#8221;"
+msgstr "&#8216;"
 
 #: wp-includes/formatting.php:52
 msgctxt "closing curly single quote"
 msgid "&#8217;"
-msgstr "&#8221;"
+msgstr "&#8217;"
 
 #: wp-signup.php:98
 msgid "Allow search engines to index this site."
@@ -675,7 +675,7 @@ msgstr "Infoga Mer-tagg (Alt + Skift + T)"
 msgid "Show/Hide Kitchen Sink (Alt + Shift + Z)"
 msgstr "Visa/dölj utökad verktygsrad (Alt + Skift + Z)"
 
-#: wp-includes/class-wp-editor.php:643
+#: wp-includes/class-wp-editor.php:641
 #: wp-includes/js/tinymce/langs/wp-langs.php:320
 msgid "Blockquote (Alt + Shift + Q)"
 msgstr "Citat (Alt + Skift + Q)"
@@ -723,7 +723,7 @@ msgstr "http://wordpress.org/support/forum/requests-and-feedback"
 msgid "%s exceeds the maximum upload size for this site."
 msgstr "%s överstiger den maximala filstorleken för uppladdning på den här webbplatsen."
 
-#: wp-includes/functions.php:2824
+#: wp-includes/functions.php:2729
 msgid "Please see <a href=\"http://codex.wordpress.org/Debugging_in_WordPress\">Debugging in WordPress</a> for more information."
 msgstr "Se <a href=\"http://codex.wordpress.org/Debugging_in_WordPress\">Felsökning i WordPress</a> för mer information."
 
@@ -954,11 +954,11 @@ msgstr "Supportforum"
 msgid "&hellip;"
 msgstr "&hellip;"
 
-#: wp-includes/functions.php:2615
+#: wp-includes/functions.php:2520
 msgid "Database Error"
 msgstr "Databasfel"
 
-#: wp-includes/functions.php:2619
+#: wp-includes/functions.php:2524
 msgid "Error establishing a database connection"
 msgstr "Ett fel uppstod vid anslutning till databasen"
 
@@ -1107,7 +1107,7 @@ msgstr "Smalare"
 msgid "Default width"
 msgstr "Standardbredd"
 
-#: wp-includes/class-wp-editor.php:691
+#: wp-includes/class-wp-editor.php:689
 msgid "Word count: %s"
 msgstr "Antal ord: %s"
 
@@ -1119,7 +1119,7 @@ msgstr "Ditt konto är nu aktiverat. <a href=\"%1$s\">Logga in</a> eller gå til
 msgid "Your account is now activated. <a href=\"%1$s\">View your site</a> or <a href=\"%2$s\">Log in</a>"
 msgstr "Ditt konto är nu aktiverat. <a href=\"%1$s\">Visa din webbplats</a> eller <a href=\"%2$s\">logga in</a>"
 
-#: wp-includes/class-wp-editor.php:649
+#: wp-includes/class-wp-editor.php:647
 #: wp-includes/js/tinymce/langs/wp-langs.php:501
 msgid "Help (Alt + Shift + H)"
 msgstr "Hjälp (Alt + Shift + H)"
@@ -1128,11 +1128,11 @@ msgstr "Hjälp (Alt + Shift + H)"
 msgid "Howdy, %1$s"
 msgstr "Hej, %1$s"
 
-#: wp-includes/class-wp-editor.php:624
+#: wp-includes/class-wp-editor.php:622
 msgid "Exit fullscreen"
 msgstr "Avsluta fullskärmsläge"
 
-#: wp-includes/class-wp-editor.php:692
+#: wp-includes/class-wp-editor.php:690
 msgid "Just write."
 msgstr "Bara skriv."
 
@@ -1148,7 +1148,7 @@ msgstr "Alla inlägg"
 msgid "All Pages"
 msgstr "Alla sidor"
 
-#: wp-includes/class-wp-editor.php:671
+#: wp-includes/class-wp-editor.php:669
 msgid "Updated."
 msgstr "Uppdaterat."
 
@@ -1156,37 +1156,37 @@ msgstr "Uppdaterat."
 msgid "fullscreen"
 msgstr "fullskärm"
 
-#: wp-includes/class-wp-editor.php:637
+#: wp-includes/class-wp-editor.php:635
 #: wp-includes/js/tinymce/langs/wp-langs.php:286
 msgid "Bold (Ctrl + B)"
 msgstr "Fet (Ctrl + B)"
 
-#: wp-includes/class-wp-editor.php:638
+#: wp-includes/class-wp-editor.php:636
 #: wp-includes/js/tinymce/langs/wp-langs.php:287
 msgid "Italic (Ctrl + I)"
 msgstr "Kursiv (Ctrl + I)"
 
-#: wp-includes/class-wp-editor.php:641
+#: wp-includes/class-wp-editor.php:639
 #: wp-includes/js/tinymce/langs/wp-langs.php:295
 msgid "Ordered list (Alt + Shift + O)"
 msgstr "Numrerad lista (Alt + Shift + O)"
 
-#: wp-includes/class-wp-editor.php:640
+#: wp-includes/class-wp-editor.php:638
 #: wp-includes/js/tinymce/langs/wp-langs.php:294
 msgid "Unordered list (Alt + Shift + U)"
 msgstr "Oordnad lista (Alt + Skift + U)"
 
-#: wp-includes/class-wp-editor.php:644
+#: wp-includes/class-wp-editor.php:642
 #: wp-includes/js/tinymce/langs/wp-langs.php:302
 msgid "Insert/edit image (Alt + Shift + M)"
 msgstr "Infoga/redigera bild (Alt + Skift + M)"
 
-#: wp-includes/class-wp-editor.php:646
+#: wp-includes/class-wp-editor.php:644
 #: wp-includes/js/tinymce/langs/wp-langs.php:300
 msgid "Insert/edit link (Alt + Shift + A)"
 msgstr "Infoga/redigera länk (Alt + Skift + A)"
 
-#: wp-includes/class-wp-editor.php:647
+#: wp-includes/class-wp-editor.php:645
 #: wp-includes/js/tinymce/langs/wp-langs.php:301
 msgid "Unlink (Alt + Shift + S)"
 msgstr "Ta bort länkning (Alt + Skift + S)"
@@ -1473,11 +1473,11 @@ msgstr "Det finns inga poster markerade som <a href='%1$s'>skräppost</a> för t
 msgid "Cleared by Akismet"
 msgstr "Godkänd av Akismet"
 
-#: wp-includes/class-wp-editor.php:770
+#: wp-includes/class-wp-editor.php:768
 msgid "Enter the destination URL"
 msgstr "Ange destinationsadress"
 
-#: wp-includes/class-wp-editor.php:782
+#: wp-includes/class-wp-editor.php:780
 msgid "Or link to existing content"
 msgstr "Eller länka till befintligt innehåll"
 
@@ -1501,11 +1501,11 @@ msgstr "Villkorstyrda query-taggar fungerar inte innan en query körs. Innan det
 msgid "The user is already active."
 msgstr "Användaren är redan aktiv."
 
-#: wp-includes/functions.php:2825
+#: wp-includes/functions.php:2730
 msgid "%1$s was called <strong>incorrectly</strong>. %2$s %3$s"
 msgstr "%1$s kallades <strong>felaktigt</strong>. %2$s %3$s"
 
-#: wp-includes/functions.php:2823
+#: wp-includes/functions.php:2728
 msgid "(This message was added in version %s.)"
 msgstr "(Detta meddelande lades till i version %s.)"
 
@@ -1606,10 +1606,6 @@ msgstr "Permalänk: %s"
 msgid "Error occurred while accessing post metadata for file location."
 msgstr "Ett fel uppstod vid åtkomst till inläggets metadata för filens plats."
 
-#: wp-includes/functions.php:1889
-msgid "Your attempt to update this plugin: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att uppdatera detta tillägg: &#8220;%s&#8220; misslyckades."
-
 #: wp-includes/post.php:5114
 msgctxt "Post format"
 msgid "Standard"
@@ -1646,11 +1642,11 @@ msgstr "Ogiltigt inläggsformat"
 msgid "Whois  : http://whois.arin.net/rest/ip/%s"
 msgstr "Whois  : http://whois.arin.net/rest/ip/%s"
 
-#: wp-includes/class-wp-editor.php:778
+#: wp-includes/class-wp-editor.php:776
 msgid "Open link in a new window/tab"
 msgstr "Öppna länken i ett nytt fönster/flik"
 
-#: wp-includes/class-wp-editor.php:798
+#: wp-includes/class-wp-editor.php:796
 msgid "No search term specified. Showing recent items."
 msgstr "Inga sökord angivna. Visar senaste objekten."
 
@@ -2674,7 +2670,7 @@ msgstr "Använd <code>get_the_author()</code> istället om du inte vill eka vär
 msgid "If you&#8217;re still stuck with this message, then check that your database contains the following tables:"
 msgstr "Om du fortfarande får upp det här meddelandet, kontrollera så att databasen innehåller följande tabeller:"
 
-#: wp-includes/class-wp-editor.php:682
+#: wp-includes/class-wp-editor.php:680
 msgid "Enter title here"
 msgstr "Ange rubrik här"
 
@@ -2738,17 +2734,17 @@ msgstr ""
 msgid "This is the short link."
 msgstr "Detta är den korta länken."
 
-#: wp-includes/update.php:358
+#: wp-includes/update.php:357
 msgid "%d WordPress Update"
 msgstr "%d Uppdatering för WordPress"
 
-#: wp-includes/update.php:362
+#: wp-includes/update.php:361
 msgid "%d Theme Update"
 msgid_plural "%d Theme Updates"
 msgstr[0] "%d uppdatering för tema"
 msgstr[1] "%d uppdateringar för teman"
 
-#: wp-includes/update.php:360
+#: wp-includes/update.php:359
 msgid "%d Plugin Update"
 msgid_plural "%d Plugin Updates"
 msgstr[0] "%d uppdatering för tillägg"
@@ -3383,187 +3379,55 @@ msgstr "Tomt filnamn"
 msgid "Could not write file %s"
 msgstr "Kunde inte skriva till filen %s"
 
-#: wp-includes/functions.php:1864
-msgid "Your attempt to edit this attachment: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att redigera den här bilagan: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1866
-msgid "Your attempt to add this category has failed."
-msgstr "Ditt försök att lägga till den här kategorin misslyckades."
-
-#: wp-includes/functions.php:1867
-msgid "Your attempt to delete this category: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att radera den här kategorin: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1868
-msgid "Your attempt to edit this category: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att redigera den här kategorin: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1870
-msgid "Your attempt to delete this comment: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att radera den här kommentaren: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1871
-msgid "Your attempt to unapprove this comment: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att förkasta den här kommentaren: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1872
-msgid "Your attempt to approve this comment: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att godkänna den här kommentaren: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1873
-msgid "Your attempt to edit this comment: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att redigera den här kommentaren: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1874
-msgid "Your attempt to bulk modify comments has failed."
-msgstr "Ditt försök att massredigera kommentarerna misslyckades."
-
-#: wp-includes/functions.php:1875
-msgid "Your attempt to moderate comments has failed."
-msgstr "Ditt försök att moderera kommentarerna misslyckades."
-
-#: wp-includes/functions.php:1877
-msgid "Your attempt to add this link has failed."
-msgstr "Ditt försök att lägga till denna länk misslyckades."
-
-#: wp-includes/functions.php:1878
-msgid "Your attempt to delete this link: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att radera den här länken: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1879
-msgid "Your attempt to edit this link: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att redigera den här länken: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1880
-msgid "Your attempt to bulk modify links has failed."
-msgstr "Ditt försök att massredigera länkarna misslyckades."
-
-#: wp-includes/functions.php:1882
-msgid "Your attempt to add this page has failed."
-msgstr "Ditt försök att lägga till denna sida misslyckades."
-
-#: wp-includes/functions.php:1883
-msgid "Your attempt to delete this page: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att radera den här sidan: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1884
-msgid "Your attempt to edit this page: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att redigera den här sidan: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1886
-msgid "Your attempt to edit this plugin file: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att redigera den här tilläggsfilen: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1887
-msgid "Your attempt to activate this plugin: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att aktivera det här tillägget: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1888
-msgid "Your attempt to deactivate this plugin: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att inaktivera det här tillägget: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1891
-msgid "Your attempt to add this post has failed."
-msgstr "Ditt försök att skriva inlägg misslyckades."
-
-#: wp-includes/functions.php:1892
-msgid "Your attempt to delete this post: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att radera det här inlägget: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1893
-msgid "Your attempt to edit this post: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att redigera det här inlägget: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1895
-msgid "Your attempt to add this user has failed."
-msgstr "Ditt försök att lägga till denna användare misslyckades."
-
-#: wp-includes/functions.php:1896
-msgid "Your attempt to delete users has failed."
-msgstr "Ditt försök att radera de här användarna misslyckades."
-
-#: wp-includes/functions.php:1897
-msgid "Your attempt to bulk modify users has failed."
-msgstr "Ditt försök att massredigera användarna misslyckades."
-
-#: wp-includes/functions.php:1898
-msgid "Your attempt to edit this user: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att redigera den här användaren: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1899
-msgid "Your attempt to modify the profile for: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att modifiera profilen för: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1901
-msgid "Your attempt to edit your settings has failed."
-msgstr "Ditt försök att redigera inställningarna misslyckades."
-
-#: wp-includes/functions.php:1902
-msgid "Your attempt to change your permalink structure to: %s has failed."
-msgstr "Ditt försök att ändra din permalänkstruktur till: %s misslyckades."
-
-#: wp-includes/functions.php:1903
-msgid "Your attempt to edit this file: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att redigera den här filen: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1904
-msgid "Your attempt to edit this theme file: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att redigera den här temafilen: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1905
-msgid "Your attempt to switch to this theme: &#8220;%s&#8221; has failed."
-msgstr "Ditt försök att byta till temat: &#8221;%s&#8221; misslyckades."
-
-#: wp-includes/functions.php:1907
+#: wp-includes/functions.php:1850
 msgid "You are attempting to log out of %s"
 msgstr "Du försöker att logga ut ifrån %s"
 
-#: wp-includes/functions.php:1946
+#: wp-includes/functions.php:1848
 msgid "WordPress Failure Notice"
 msgstr "WordPress felmeddelande"
 
-#: wp-includes/functions.php:1949
+#: wp-includes/functions.php:1851
 msgid "Do you really want to <a href='%s'>log out</a>?"
 msgstr "Vill du verkligen <a href='%s'>logga ut</a>?"
 
-#: wp-includes/functions.php:1951
+#: wp-includes/functions.php:1855
 msgid "Please try again."
 msgstr "Var vänlig försök igen."
 
-#: wp-includes/functions.php:2026
+#: wp-includes/functions.php:1931
 msgid "&laquo; Back"
 msgstr "&laquo; Tillbaka"
 
-#: wp-includes/functions.php:2038 wp-load.php:60
+#: wp-includes/functions.php:1943 wp-load.php:60
 msgid "WordPress &rsaquo; Error"
 msgstr "WordPress &rsaquo; Fel"
 
-#: wp-includes/functions.php:2705 wp-includes/functions.php:2745
+#: wp-includes/functions.php:2610 wp-includes/functions.php:2650
 msgid "%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "%1$s har <strong>upphört</strong> sedan version %2$s! Använd %3$s istället."
 
-#: wp-includes/functions.php:2707 wp-includes/functions.php:2747
+#: wp-includes/functions.php:2612 wp-includes/functions.php:2652
 msgid "%1$s is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s har <strong>upphört</strong> sedan version %2$s utan alternativ tillgängliga."
 
-#: wp-includes/functions.php:2789
+#: wp-includes/functions.php:2694
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s! %3$s"
 msgstr "%1$s kallades med ett argument som har <strong>upphört</strong> sedan version %2$s! %3$s"
 
-#: wp-includes/functions.php:2791
+#: wp-includes/functions.php:2696
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s kallades med ett argument som har <strong>upphört</strong> sedan version %2$s utan alternativ tillgängliga."
 
-#: wp-includes/functions.php:3219
+#: wp-includes/functions.php:3124
 msgid "Select a city"
 msgstr "Välj en stad"
 
-#: wp-includes/functions.php:3264 wp-includes/functions.php:3268
+#: wp-includes/functions.php:3169 wp-includes/functions.php:3173
 msgid "UTC"
 msgstr "UTC"
 
-#: wp-includes/functions.php:3272
+#: wp-includes/functions.php:3177
 msgid "Manual Offsets"
 msgstr "Manuella kompensationer"
 
@@ -6185,11 +6049,11 @@ msgstr "Tillägg"
 msgid "Insert Image"
 msgstr "Infoga bild"
 
-#: wp-includes/class-wp-editor.php:86 wp-includes/class-wp-editor.php:629
+#: wp-includes/class-wp-editor.php:86 wp-includes/class-wp-editor.php:627
 msgid "HTML"
 msgstr "HTML"
 
-#: wp-includes/class-wp-editor.php:87 wp-includes/class-wp-editor.php:628
+#: wp-includes/class-wp-editor.php:87 wp-includes/class-wp-editor.php:626
 msgid "Visual"
 msgstr "Visuell"
 
@@ -6220,7 +6084,7 @@ msgstr "(måste anges)"
 msgid "Website"
 msgstr "Webbplats"
 
-#: wp-includes/admin-bar.php:592 wp-includes/functions.php:2557
+#: wp-includes/admin-bar.php:592 wp-includes/functions.php:2462
 msgid "Widgets"
 msgstr "Widgets"
 
@@ -6733,7 +6597,7 @@ msgstr "Lämna ett svar till %s"
 msgid "Author"
 msgstr "Författare"
 
-#: wp-includes/class-wp-editor.php:772
+#: wp-includes/class-wp-editor.php:770
 msgid "URL"
 msgstr "URL"
 
@@ -6742,7 +6606,7 @@ msgctxt "noun"
 msgid "Comment"
 msgstr "Kommentar"
 
-#: wp-includes/functions.php:1927 wp-includes/functions.php:1929
+#: wp-includes/deprecated.php:3173 wp-includes/functions.php:1853
 msgid "Are you sure you want to do this?"
 msgstr "Är du säker på att du vill göra det här?"
 
@@ -6810,11 +6674,11 @@ msgstr "Redigera länkkategori"
 msgid "Update Category"
 msgstr "Uppdatera kategori"
 
-#: wp-includes/class-wp-editor.php:811 wp-includes/script-loader.php:278
+#: wp-includes/class-wp-editor.php:809 wp-includes/script-loader.php:278
 msgid "Add Link"
 msgstr "Lägg till länk"
 
-#: wp-includes/class-wp-editor.php:619
+#: wp-includes/class-wp-editor.php:617
 #: wp-includes/js/tinymce/langs/wp-langs.php:118
 msgid "Save"
 msgstr "Spara"
@@ -6897,7 +6761,7 @@ msgstr "Förhandsgranska"
 msgid "Recent Comments"
 msgstr "Senaste kommentarer"
 
-#: wp-includes/class-wp-editor.php:808
+#: wp-includes/class-wp-editor.php:806
 #: wp-includes/js/tinymce/langs/wp-langs.php:19
 #: wp-includes/script-loader.php:306 wp-includes/script-loader.php:344
 msgid "Cancel"
@@ -7004,7 +6868,7 @@ msgstr "Lägg till en video"
 msgid "Add Audio"
 msgstr "Lägg till ljud"
 
-#: wp-includes/class-wp-editor.php:671
+#: wp-includes/class-wp-editor.php:669
 msgid "Saved."
 msgstr "Sparat."
 
@@ -7116,7 +6980,7 @@ msgid "Dismiss"
 msgstr "Avfärda"
 
 #: wp-content/plugins/akismet/legacy.php:176 wp-includes/admin-bar.php:639
-#: wp-includes/class-wp-editor.php:786 wp-includes/default-widgets.php:194
+#: wp-includes/class-wp-editor.php:784 wp-includes/default-widgets.php:194
 #: wp-includes/general-template.php:163
 msgid "Search"
 msgstr "Sök"
@@ -7213,7 +7077,7 @@ msgstr "Väntar på granskning"
 msgid "Draft"
 msgstr "Utkast"
 
-#: wp-includes/class-wp-editor.php:743
+#: wp-includes/class-wp-editor.php:741
 msgid "Y/m/d"
 msgstr "Y/m/d"
 
