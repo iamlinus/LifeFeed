@@ -1,0 +1,439 @@
+/* 
+Theme Name: iamlinus
+Theme URI: http://www.iamlinus.se
+Description: Officiellt tema för iamlinus.
+Version: 1
+Author: Linus Larsson
+Author URI: http://www.iamlinus.se
+Tags: flexible, multi-column
+Last updated: 2011-08-31 21:14
+
+The CSS, XHTML and design is released under GPL: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+
+
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+	
+	
+/* Elements */
+* 
+{
+	margin:0;
+	padding:0;
+}
+body {
+	margin: 0;
+	padding: 0;
+    font-family: 'Josefin Slab',serif;
+	line-height: 1.2em;
+	font-size: 10px; /* IE5 Win */
+  	voice-family: "\"}\""; 
+  	voice-family: inherit;
+  	font-size: 10px; /* easy scaling */
+  	font-size: 1.0em;
+	color: #000;
+	background-image: url(img/bg.jpg); 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+font-family: 'Ultra', serif;
+	font-weight:normal;
+	color: #777;
+	text-decoration:none;
+}
+
+p, blockquote, ul, ol, li {
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom:0.5em;
+	list-style: none outside none;
+}
+
+p {
+	margin-bottom: 0.9em;
+	color: silver;
+	line-height: 1.2em;
+}
+
+
+pre {
+	font-size:1.5em;
+}
+
+a:link, a:visited {
+	color: #000;
+	text-decoration:underlined;
+}
+
+a:hover,a:active 
+{
+	text-decoration:line-through;
+	
+}
+img.left 
+{
+	float:left;
+	margin:0 1em 1em 0;
+}
+img.right 
+{
+	float:right;
+	margin:0 0 1em 1em;
+}
+a img 
+{
+	border:0;
+}
+
+blockquote 
+{
+	margin:1em;
+	padding:5px 1em;
+	color:#000;
+	background:#eee;
+}
+fieldset 
+{
+	border:none;
+}
+
+dl {
+	margin:1em 0px;
+}
+dt 
+{
+	font-weight:bold;
+}
+dd 
+{
+	margin:0.5em 1em;
+	padding:0;
+}
+code
+{
+	font-size: 1em;	
+}
+
+
+sup,
+sub {
+	height: 0;
+	line-height: 1;
+	vertical-align: baseline;
+	_vertical-align: bottom;
+	position: relative;
+	font-size:0.6em;	
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+/* Header */
+
+#header {
+background:none no-repeat scroll center top transparent;
+height:100px;
+}
+
+/* Logo */
+
+#logo {
+	padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#logo h1 {
+font-size: 10em;
+	line-height:1em;
+	font-weight: bold;
+color:#c4e6f0;
+font-family: 'Ultra', serif;
+text-shadow: 4px 4px 10px #000;
+opacity: 0.8;
+  filter: alpha(opacity=80); 
+    }
+
+#logo h1 span {
+color:#6199a9;
+text-shadow: 4px 4px 10px #000; 
+}
+
+#logo h2 {
+font-size: 6em;
+line-height:1em;
+font-weight: bold;
+color:#c4e6f0;
+font-family: 'Ultra', serif;
+text-shadow: 4px 4px 10px #000;
+opacity: 0.8;
+filter: alpha(opacity=80); 
+}
+
+#logo h2 span {
+color:#6199a9;
+text-shadow: 4px 4px 10px #000; 
+}
+
+#logo a {
+	text-decoration: none;
+	border:0;
+text-shadow:1px 1px 10px #000000;
+	text-decoration:none;
+}
+
+#logo a:hover, #logo a:visited, #logo a:link, 
+{
+	border:0;
+	text-decoration:none;
+}
+
+/* Index image */
+.limpan {
+	height: 400px;
+	background-image: url("img/linusbg.jpg");
+    background-position: center center;
+    	}
+
+
+/* Main */
+#content ul {
+	margin: 0.5em 0;
+	padding: 0 0 0 2em;
+	list-style-type:none;
+}
+#content ul li {
+	margin:0.5em 0;
+	padding:0;
+	line-height:130%;
+}
+
+.container .entry p {
+    font-size: 1.8em;
+    text-align: justify;
+}
+
+.post h1 {
+    font-size: 40px;
+    line-height: 46px;
+}
+
+.post h2 {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: normal;
+}
+
+.Twitter h1 {
+    display: none
+}
+
+
+.post .entry p
+{
+    font-size: 1.2em;
+}
+
+.Twitter .entry p
+{
+	font-size: 2.5em;	
+}
+
+.post .date {
+	float: right;
+	margin:5px 0 0 5px;
+	padding:0 10px;
+	text-align:center;
+	font-size: 0.8em;
+	border:#ccc 1px solid;
+	font-weight:bold;
+	color:#556677;
+}
+
+.post .date span 
+{
+	display:block;
+}
+
+.post .date .day {
+	font-size:1.6em;
+}
+
+.post .meta {
+	margin: 10px 0;
+	font-size: 0.9em;
+	color:#999;
+}
+
+.post .comments {
+	font-size:1em;
+	font-weight:bold;
+	color:#999;
+	margin-left:5px;
+	padding-left:20px;
+	background:url(img/icon_comments.gif) no-repeat left center;
+}
+
+.post .comments a {
+	border-bottom:0px;
+	color:#aaa;
+		text-decoration:none;
+}
+.commentmetadata a {
+	border:0;
+	color:#777;
+}
+.cmtinfo .avatar {
+	vertical-align:middle;
+	padding-right:7px;
+}
+
+#main .feed 
+{
+	background:url(img/icon_feed.gif) no-repeat left 3px;
+	padding-left:17px; 
+}
+ul.authorposts
+{
+	margin:0;
+	padding:0 2em;
+}
+ul.authorposts li
+{
+	margin:0;
+	padding:5px;	
+}
+ul.authorposts li em 
+{
+	float:right;
+	font-style:normal;
+}
+
+.widget {
+    background-color: #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    min-height: 130px;
+    padding: 10px;
+    opacity: 0.7; 
+  filter: alpha(opacity=70); 
+}
+
+.widget h2 {
+    font-size: 0.8em;
+    margin: 0 0 5px;
+}
+
+.widget h2 a img {
+display: none;
+}
+
+/* instagram */
+div#igw-widget-container {
+    clear: both;
+    height: 105px;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+
+div#igw_gallery_content {
+	    height: 105px;
+	}
+	
+div#igw_gallery_content a img {
+margin: 5px 5px;
+	}
+
+}
+#header, #main, #sidebar, #footer, .widget 
+{
+	overflow:visible;
+}
+.amzshcs
+{
+	text-align:center;
+}
+.amzshcs-item
+{
+	padding:5px;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+margin-left: 50px;
+}
+
+/* =================================== */
+/* !      H1 och H2iamLINUS fix        */
+/* =================================== */
+
+@media only screen and (max-width: 1060px) {
+
+#logo h1 {
+font-size: 8em;
+}
+#logo h2 {
+font-size: 5em;
+}
+}
+	
+@media only screen and (max-width: 860px) {
+
+#logo h1 {
+font-size: 6em;
+}
+#logo h1 {
+font-size: 4em;
+}
+}
+
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media only screen and (max-width: 767px) {
+	
+#logo h1, #logo h2 {
+font-size: 3.5em;
+position: absolute;
+top: 0;
+left: 20%
+}
+
+.header {
+height: 60px;	
+	}
+
+.limpan {
+height: 200px;
+background-position: center -114px;
+    	}
+}
+
+@media only screen and (max-width: 460px) {
+	
+#logo h1, #logo h2 {
+font-size: 2.5em;
+left: 10%
+}
+}
