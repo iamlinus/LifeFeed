@@ -1,8 +1,8 @@
 /* 
-Theme Name: iamlinus LifeFeed
+Theme Name: iamlinus
 Theme URI: http://www.iamlinus.se
-Description: Officiellt tema för iamlinus. LifeFeed på GitHub.
-Version: 3
+Description: Officiellt tema för iamlinus.
+Version: 1
 Author: Linus Larsson
 Author URI: http://www.iamlinus.se
 Tags: flexible, multi-column
@@ -19,11 +19,12 @@ The CSS, XHTML and design is released under GPL: http://www.opensource.org/licen
 	
 	
 /* Elements */
-* 
-{
+* {
 	margin:0;
 	padding:0;
+	border:0 none;
 }
+
 body {
 	margin: 0;
 	padding: 0;
@@ -41,10 +42,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
-font-family: 'Ultra', serif;
+	font-family: 'Bitter', serif;
 	font-weight:normal;
-	color: #777;
-	text-decoration:none;
+	color: silver;
 }
 
 p, blockquote, ul, ol, li {
@@ -57,7 +57,6 @@ p, blockquote, ul, ol, li {
 p {
 	margin-bottom: 0.9em;
 	color: silver;
-	line-height: 1.2em;
 }
 
 
@@ -70,23 +69,25 @@ a:link, a:visited {
 	text-decoration:underlined;
 }
 
-a:hover,a:active 
-{
+a:hover,a:active {
 	text-decoration:line-through;
-	
 }
-img.left 
-{
+
+h1 a:link, h1 a:visited, h1 a:hover, h1 a:active {
+text-decoration: none;
+}
+
+img.left {
 	float:left;
 	margin:0 1em 1em 0;
 }
-img.right 
-{
+
+img.right {
 	float:right;
 	margin:0 0 1em 1em;
 }
-a img 
-{
+
+a img {
 	border:0;
 }
 
@@ -138,14 +139,14 @@ sub {
 	top: .5ex;
 }
 
-/* Header */
+/* ===== Header ===== */
 
 #header {
 background:none no-repeat scroll center top transparent;
 height:100px;
 }
 
-/* Logo */
+/* ===== Logo ===== */
 
 #logo {
 	padding: 0;
@@ -192,8 +193,7 @@ text-shadow:1px 1px 10px #000000;
 	text-decoration:none;
 }
 
-#logo a:hover, #logo a:visited, #logo a:link, 
-{
+#logo a:hover, #logo a:visited, #logo a:link {
 	border:0;
 	text-decoration:none;
 }
@@ -203,10 +203,35 @@ text-shadow:1px 1px 10px #000000;
 	height: 400px;
 	background-image: url("img/linusbg.jpg");
     background-position: center center;
-    	}
+}
 
 
-/* Main */
+/* ===== Main ===== */
+
+.post h1 {
+    font-size: 35px;
+    line-height: 45px;
+}
+
+.post h2 {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.post h3 {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.post h4 {
+    font-size: 13px;
+    line-height: 23px;
+}
+
+.post a {
+color: silver;
+}
+
 #content ul {
 	margin: 0.5em 0;
 	padding: 0 0 0 2em;
@@ -218,35 +243,14 @@ text-shadow:1px 1px 10px #000000;
 	line-height:130%;
 }
 
-.container .entry p {
-    font-size: 1.8em;
-    text-align: justify;
-}
-
-.post h1 {
-    font-size: 40px;
-    line-height: 46px;
-}
-
-.post h2 {
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: normal;
-}
-
 .Twitter h1 {
     display: none
 }
 
-
-.post .entry p
-{
-    font-size: 1.2em;
-}
-
-.Twitter .entry p
-{
-	font-size: 2.5em;	
+.Twitter .entry p {
+	font-size: 35px;
+	line-height: 45px;
+	font-family: 'Bitter', serif;
 }
 
 .post .date {
@@ -319,13 +323,21 @@ ul.authorposts li em
 	font-style:normal;
 }
 
+/* ==== Widgets ==== */
+
 .widget {
-    background-color: #FFFFFF;
-    border-radius: 10px 10px 10px 10px;
+	background-color: rgba(255, 255, 255, 0.5);
+    background-clip: padding-box;
+	border-radius: 10px 10px 10px 10px;
     min-height: 130px;
     padding: 10px;
-    opacity: 0.7; 
-  filter: alpha(opacity=70); 
+    /* opacity: 0.7; */ 
+	/* filter: alpha(opacity=70); */
+    /* background-color: #FFFFFF; */
+}
+
+.widget h2, .widget h3, .widget h4 {
+	color: #000;
 }
 
 .widget h2 {
@@ -337,7 +349,7 @@ ul.authorposts li em
 display: none;
 }
 
-/* instagram */
+/* Instagram */
 div#igw-widget-container {
     clear: both;
     height: 105px;
