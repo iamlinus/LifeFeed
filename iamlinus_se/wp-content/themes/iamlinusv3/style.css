@@ -33,10 +33,10 @@ body {
 	font-size: 10px; /* IE5 Win */
   	voice-family: "\"}\""; 
   	voice-family: inherit;
-  	font-size: 10px; /* easy scaling */
-  	font-size: 1.0em;
 	color: #000;
 	background-image: url(img/bg.jpg); 
+  	font-size: 10px;
+  	font-size: 1.0em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -186,15 +186,9 @@ color:#6199a9;
 text-shadow: 4px 4px 10px #000; 
 }
 
-#logo a {
-	text-decoration: none;
+#logo a:hover, #logo a:visited, #logo a:link, #logo a:active {
 	border:0;
-text-shadow:1px 1px 10px #000000;
-	text-decoration:none;
-}
-
-#logo a:hover, #logo a:visited, #logo a:link {
-	border:0;
+	text-shadow:1px 1px 10px #000000;
 	text-decoration:none;
 }
 
@@ -401,22 +395,24 @@ margin-left: 50px;
 
 @media only screen and (max-width: 1060px) {
 
-#logo h1 {
-font-size: 8em;
-}
-#logo h2 {
-font-size: 5em;
-}
+	#logo h1 {
+	font-size: 8em;
+	}
+	#logo h2 {
+	font-size: 5em;
+	}
+
 }
 	
 @media only screen and (max-width: 860px) {
 
-#logo h1 {
-font-size: 6em;
-}
-#logo h1 {
-font-size: 4em;
-}
+	#logo h1 {
+	font-size: 6em;
+	}
+	#logo h1 {
+	font-size: 4em;
+	}
+
 }
 
 /* ============================= */
@@ -425,27 +421,32 @@ font-size: 4em;
 
 @media only screen and (max-width: 767px) {
 	
-#logo h1, #logo h2 {
-font-size: 3.5em;
-position: absolute;
-top: 0;
-left: 20%
-}
-
-.header {
-height: 60px;	
+	#logo h1, #logo h2 {
+	font-size: 3.5em;
+	position: absolute;
+	top: 0;
+	left: 20%
+	}
+	
+	.header {
+	height: 60px;	
+		}
+	
+	.limpan {
+	height: 200px;
+	background-position: center -114px;
+	    	}
+	.post .entry p {
+	font-size: 19px;
+	line-height: 150%;
 	}
 
-.limpan {
-height: 200px;
-background-position: center -114px;
-    	}
 }
 
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 461px) {
 	
-#logo h1, #logo h2 {
-font-size: 2.5em;
-left: 10%
-}
+	#logo h1, #logo h2 {
+	font-size: 2.5em;
+	left: 10%;
+	}
 }
