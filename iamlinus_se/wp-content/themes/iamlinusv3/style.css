@@ -1,8 +1,8 @@
 /* 
-Theme Name: iamlinus
+Theme Name: iamlinus v3
 Theme URI: http://www.iamlinus.se
 Description: Officiellt tema för iamlinus.
-Version: 1
+Version: 3
 Author: Linus Larsson
 Author URI: http://www.iamlinus.se
 Tags: flexible, multi-column
@@ -28,9 +28,8 @@ The CSS, XHTML and design is released under GPL: http://www.opensource.org/licen
 body {
 	margin: 0;
 	padding: 0;
-    font-family: 'Josefin Slab',serif;
+    font-family: Georgia,"Times New Roman",Times,serif;
 	line-height: 1.2em;
-	font-size: 10px; /* IE5 Win */
   	voice-family: "\"}\""; 
   	voice-family: inherit;
 	color: #000;
@@ -44,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	font-family: 'Bitter', serif;
 	font-weight:normal;
-	color: silver;
+	color: #000;
 }
 
 p, blockquote, ul, ol, li {
@@ -56,7 +55,9 @@ p, blockquote, ul, ol, li {
 
 p {
 	margin-bottom: 0.9em;
-	color: silver;
+	color: #000;
+	line-height: 20px;
+	font-size: 14px;
 }
 
 
@@ -65,16 +66,25 @@ pre {
 }
 
 a:link, a:visited {
-	color: #000;
-	text-decoration:underlined;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #000;
 }
 
 a:hover,a:active {
-	text-decoration:line-through;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a img {
+	border:0;
 }
 
 h1 a:link, h1 a:visited, h1 a:hover, h1 a:active {
 text-decoration: none;
+    background-color: transparent;
+    color: #000;    
 }
 
 img.left {
@@ -87,42 +97,35 @@ img.right {
 	margin:0 0 1em 1em;
 }
 
-a img {
-	border:0;
-}
-
-blockquote 
-{
+blockquote {
 	margin:1em;
 	padding:5px 1em;
 	color:#000;
 	background:#eee;
 }
-fieldset 
-{
+
+fieldset {
 	border:none;
 }
 
 dl {
 	margin:1em 0px;
 }
-dt 
-{
+
+dt {
 	font-weight:bold;
 }
-dd 
-{
+
+dd {
 	margin:0.5em 1em;
 	padding:0;
 }
-code
-{
+
+code {
 	font-size: 1em;	
 }
 
-
-sup,
-sub {
+sup, sub {
 	height: 0;
 	line-height: 1;
 	vertical-align: baseline;
@@ -137,6 +140,10 @@ sup {
 
 sub {
 	top: .5ex;
+}
+
+iframe {
+	width: 100%;
 }
 
 /* ===== Header ===== */
@@ -194,13 +201,33 @@ text-shadow: 4px 4px 10px #000;
 
 /* Index image */
 .limpan {
-	height: 400px;
-	background-image: url("img/linusbg.jpg");
-    background-position: center center;
+    background: url("img/linusbg.jpg") no-repeat scroll center center transparent;
+    float: left;
+    height: 480px;
+    margin: -20px 50px -10px -50px;
+    width: 590px;
 }
 
 
 /* ===== Main ===== */
+
+.post {
+	background-color: rgba(255, 255, 255, 0.9);
+    background-clip: padding-box;
+	border-radius: 10px 10px 10px 10px;
+    min-height: 130px;
+    padding: 10px 50px;
+    overflow: hidden;
+    /* opacity: 0.7; */ 
+	/* filter: alpha(opacity=70); */
+    /* background-color: #FFFFFF; */
+}
+
+.post p:first-child{
+	font-size: 22px;
+	margin-top: 10px;
+	line-height: 30px;
+}
 
 .post h1 {
     font-size: 35px;
@@ -220,10 +247,6 @@ text-shadow: 4px 4px 10px #000;
 .post h4 {
     font-size: 13px;
     line-height: 23px;
-}
-
-.post a {
-color: silver;
 }
 
 #content ul {
@@ -268,9 +291,15 @@ color: silver;
 }
 
 .post .meta {
-	margin: 10px 0;
-	font-size: 0.9em;
+    display: inline-block;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.post .meta p {
+	font-size: 14px;
 	color:#999;
+	float: right;
 }
 
 .post .comments {
@@ -317,10 +346,23 @@ ul.authorposts li em
 	font-style:normal;
 }
 
+.wp-caption {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px 10px 10px 10px;
+    padding: 15px 10px 0;
+    text-align: center;
+}
+
+.wp-caption p {
+    font-size: 12px;
+    margin: 5px;
+    text-align: center;
+}
+
 /* ==== Widgets ==== */
 
 .widget {
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.8);
     background-clip: padding-box;
 	border-radius: 10px 10px 10px 10px;
     min-height: 130px;
@@ -330,7 +372,7 @@ ul.authorposts li em
     /* background-color: #FFFFFF; */
 }
 
-.widget h2, .widget h3, .widget h4 {
+.widget h2, .widget h3, .widget h4, .widget p {
 	color: #000;
 }
 
@@ -339,9 +381,19 @@ ul.authorposts li em
     margin: 0 0 5px;
 }
 
-.widget h2 a img {
+.widget h2 a:link, .widget h2 a:visited, .widget h2 a:hover, .widget h2 a:active {
+	text-decoration: none;
+}
+
+#rss-2 img {
 display: none;
 }
+
+div.startpage > .fourcol:last-child {
+margin: 0;
+}
+
+
 
 /* Instagram */
 div#igw-widget-container {
@@ -382,11 +434,12 @@ margin: 5px 5px;
 
 .alignleft {
 	float: left;
+	margin-right: 20px;
 }
 
 .alignright {
 	float: right;
-margin-left: 50px;
+margin-left: 20px;
 }
 
 /* =================================== */
@@ -401,7 +454,17 @@ margin-left: 50px;
 	#logo h2 {
 	font-size: 5em;
 	}
-
+	.limpan {
+	background: url("img/linusbg.jpg") no-repeat scroll 0px -60px transparent;
+	float: none;
+	height: 360px;
+    margin: -10px 0 20px -50px;
+    width: 120%;
+	}
+	.post .entry p {
+    font-size: 18px;
+    line-height: 130%;
+	}
 }
 	
 @media only screen and (max-width: 860px) {
@@ -412,7 +475,9 @@ margin-left: 50px;
 	#logo h1 {
 	font-size: 4em;
 	}
-
+		.limpan {
+	float: none;
+	}
 }
 
 /* ============================= */
@@ -420,6 +485,16 @@ margin-left: 50px;
 /* ============================= */
 
 @media only screen and (max-width: 767px) {
+	
+	body {
+	font-size: 16px;
+	-webkit-text-size-adjust: none;
+	}
+	
+	p, li, a {
+		font-size: 17px;
+		line-height: 120%;	
+	}
 	
 	#logo h1, #logo h2 {
 	font-size: 3.5em;
@@ -430,17 +505,46 @@ margin-left: 50px;
 	
 	.header {
 	height: 60px;	
-		}
+	}
 	
 	.limpan {
 	height: 200px;
 	background-position: center -114px;
-	    	}
-	.post .entry p {
-	font-size: 19px;
-	line-height: 150%;
+	float: none;
 	}
 
+	.post {
+    padding: 10px;
+	}
+
+	.row {
+	margin: 0;
+	}
+	
+	.row, body, .container {
+	width: 100%;
+	min-width: 0;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	}
+	
+	.row .onecol, .row .twocol, .row .threecol, .row .fourcol, .row .fivecol, .row .sixcol, .row .sevencol, .row .eightcol, .row .ninecol, .row .tencol, .row .elevencol, .row .twelvecol {
+	width: auto;
+	float: none;
+	margin: 0 0 10px 0;
+	padding-left: 0px;
+	padding-right: 0px;
+	}
+
+	.widget {
+		min-height: none;
+	}
+
+	div.startpage > .fourcol:last-child {
+margin: 0 0 10px 0;
+}
 }
 
 @media only screen and (max-width: 461px) {

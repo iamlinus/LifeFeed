@@ -1,4 +1,4 @@
-</div><?php //closing for #main?>
+</div> <!-- /Main och /Content-->
 <div id="footer">
   <?php // It would be great if you left the credits intact ?>
 </div>

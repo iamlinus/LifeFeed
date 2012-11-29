@@ -9,10 +9,10 @@
 	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
 
 	<!-- The 1140px Grid - http://cssgrid.net/ -->
-	<link rel="stylesheet" href="<?php bloginfo('url'); ?>/wp-content/themes/iamlinusv3/1140.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="http://www.iamlinus.se/wp-content/themes/iamlinusv3/1140.css" type="text/css" media="screen" />
 	
 	<!-- Min CSS -->
-	<link rel="stylesheet" href="<?php bloginfo('url'); ?>/wp-content/themes/iamlinusv3/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="http://www.iamlinus.se/wp-content/themes/iamlinusv3/style.css" type="text/css" media="screen" />
 	
 	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
 	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
@@ -34,4 +34,4 @@
 
 </head>
 <div class="header"></div>
-  <body>
+	<body>
